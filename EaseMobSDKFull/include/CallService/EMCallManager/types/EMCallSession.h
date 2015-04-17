@@ -1,0 +1,49 @@
+/*!
+ @header EMCallSession.h
+ @abstract 实时通话实例
+ @author EaseMob Inc.
+ @version 1.00 2014/01/01 Creation (1.00)
+ */
+
+#import <Foundation/Foundation.h>
+
+#import "EMCallServiceDefs.h"
+
+@interface EMCallSession : NSObject
+
+/*!
+ @class
+ @brief 通话实例的id，唯一
+ */
+@property (strong, nonatomic, readonly) NSString *sessionId;
+
+/*!
+ @class
+ @brief 通话对方的username
+ */
+@property (strong, nonatomic) NSString *sessionChatter;
+
+/*!
+ @class
+ @brief 通话的类型
+ */
+@property (nonatomic, readonly) EMCallSessionType type;
+
+/*!
+ @class
+ @brief 通话的状态
+ */
+@property (nonatomic) EMCallSessionStatus status;
+
+/*!
+@method
+@brief 创建通话实例（不支持外部调用）
+@discussion
+@param sessionId 通话实例的id
+@param type      通话的类型
+@result 通话实例
+*/
+- (instancetype)initWithSessionId:(NSString *)sessionId
+                             type:(EMCallSessionType)type;
+
+@end
