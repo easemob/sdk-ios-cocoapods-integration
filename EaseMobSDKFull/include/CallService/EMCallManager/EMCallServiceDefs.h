@@ -19,7 +19,7 @@
  @constant eCallSessionStatusConnected 通话已连接
  @constant eCallSessionStatusAccepted 通话双方同意协商
  */
-typedef enum{
+typedef NS_ENUM(NSInteger, EMCallSessionStatus){
     eCallSessionStatusDisconnected      = 0,
     eCallSessionStatusRinging,
     eCallSessionStatusAnswering,
@@ -27,7 +27,7 @@ typedef enum{
     eCallSessionStatusConnecting,
     eCallSessionStatusConnected,
     eCallSessionStatusAccepted,
-}EMCallSessionStatus;
+};
 
 /*!
  @enum
@@ -36,11 +36,11 @@ typedef enum{
  @constant eCallSessionTypeVideo 实时视频
  @constant eCallSessionTypeContent 暂时不支持的类型
  */
-typedef enum{
+typedef NS_ENUM(NSInteger, EMCallSessionType){
     eCallSessionTypeAudio       = 0,
     eCallSessionTypeVideo,
     eCallSessionTypeContent,
-}EMCallSessionType;
+};
 
 /*!
  @enum
@@ -52,13 +52,13 @@ typedef enum{
  @constant eCallReason_Reject 对方拒接
  @constant eCallReason_Busy 对方占线
  */
-typedef enum{
+typedef NS_ENUM(NSInteger, EMCallStatusChangedReason){
     eCallReason_Null = 0,
     eCallReason_Offline,
     eCallReason_NoResponse,
     eCallReason_Hangup,
     eCallReason_Reject,
     eCallReason_Busy,
-}EMCallStatusChangedReason;
+};
 
 #endif

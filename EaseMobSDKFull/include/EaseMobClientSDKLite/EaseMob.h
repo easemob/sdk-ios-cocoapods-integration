@@ -63,9 +63,6 @@
 - (EMError *)registerSDKWithAppKey:(NSString *)anAppKey
                       apnsCertName:(NSString *)anAPNSCertName;
 
-
-- (EMError *)registerPrivateServerWithParams:(NSDictionary *)params;
-
 /*!
  @method
  @brief 初始化SDK

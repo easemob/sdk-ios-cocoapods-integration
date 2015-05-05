@@ -9,6 +9,7 @@
 
 #import "EMCallServiceDefs.h"
 
+@class OpenGLView20;
 @interface EMCallSession : NSObject
 
 /*!
@@ -34,6 +35,12 @@
  @brief 通话的状态
  */
 @property (nonatomic) EMCallSessionStatus status;
+
+/*!
+ @class
+ @brief 视频时对方的图像显示区域
+ */
+@property (strong, nonatomic) OpenGLView20 *displayView;
 
 /*!
 @method
