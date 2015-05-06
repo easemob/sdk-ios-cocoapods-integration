@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.version      = '2.1.6'
   spec.license      = 'MIT'
   spec.summary      = 'An Objective-C client for IM service and Real-time voice'
-  spec.homepage     = 'https://github.com/easemob/sdk-ios-cocoapods-integration'
+  spec.homepage     = 'www.easemob.com'
   spec.author       = {'EaseMob Inc.' => 'admin@easemob.com'}
   spec.source       =  {:git => 'https://github.com/easemob/sdk-ios-cocoapods-integration.git', :tag => spec.version.to_s }
   spec.source_files = "EaseMobSDKFull/**/*.{h}"
