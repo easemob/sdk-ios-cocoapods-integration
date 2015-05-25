@@ -9,10 +9,9 @@ Pod::Spec.new do |spec|
   spec.source_files = "EaseMobSDKFull/**/*.{h}"
   spec.platform     = :ios, '6.0'
   spec.requires_arc = true
-  spec.frameworks = 'Foundation', 'UIKit', 'MapKit', 'ImageIO', 'CoreLocation', 'Security', 'MobileCoreServices',  'SystemConfiguration', 'AddressBook', 'CFNetwork', 'CoreGraphics', 'CoreData'
+  spec.frameworks   = 'Foundation', 'CoreLocation', 'Security', 'MobileCoreServices',  'SystemConfiguration', 'CFNetwork', 'CoreGraphics', 'CoreData', 'AVFoundation', 'CoreMedia', 'MediaPlayer', 'OpenGLES'
   spec.libraries    = 'iconv', 'xml2', 'z', 'resolv', 'stdc++', 'sqlite3', 'stdc++.6.0.9', 'stdc++.6'
   spec.documentation_url = 'http://www.easemob.com/docs/ios/IOSSDKInit/'
-  spec.compiler_flags = '-Wno-incomplete-implementation -Wno-missing-prototypes'
   spec.resource     = 'EaseMobSDKFull/resources/EaseMob.bundle'
   spec.vendored_libraries = ['EaseMobSDKFull/lib/libEaseMobClientSDK_armv7.a',
                              'EaseMobSDKFull/lib/libEaseMobClientSDK_armv7s.a',
