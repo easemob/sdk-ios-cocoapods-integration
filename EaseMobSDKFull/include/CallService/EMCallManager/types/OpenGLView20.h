@@ -1,8 +1,9 @@
-//
-//  OpenGLView20.h
-//  MyTest
-//
-//
+/*!
+ @header OpenGLView20.h
+ @abstract CallManager的视频显示页面
+ @author EaseMob Inc.
+ @version 1.00 2014/01/01 Creation (1.00)
+ */
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
@@ -12,8 +13,10 @@
 #import <OpenGLES/EAGL.h>
 #include <sys/time.h>
 #import <errno.h>
+#import <CoreMedia/CoreMedia.h>
+#import "IOpenGLView.h"
 
-@interface OpenGLView20 : UIView
+@interface OpenGLView20 : UIView<IOpenGLView>
 {
 	/** 
 	 OpenGL绘图上下文
@@ -59,18 +62,23 @@
 #endif
 }
 
-//目前只支持AVCaptureSessionPreset352x288和AVCaptureSessionPreset640x480
+/*!
+ @method
+ @brief 发给对方的视频分辨率，目前只支持AVCaptureSessionPreset352x288和AVCaptureSessionPreset640x480。
+        默认为AVCaptureSessionPreset640x480。
+ */
 @property (strong, nonatomic) NSString *sessionPreset;
 
-#pragma mark - 接口
-
-- (void)displayYUV420pData:(char *)data width:(GLuint)w height:(GLuint)h;
-
-- (void)setVideoSize:(GLuint)width height:(GLuint)height;
-
-/** 
- 清除画面
+/*!
+ @method
+ @brief   摄像头输出设置
  */
-- (void)clearFrame;
+@property (strong, nonatomic, readonly) NSDictionary *outputSettings;
+
+/*!
+ @method
+ @brief   摄像头帧率设置
+ */
+@property (nonatomic, readonly) CMTime videoMinFrameDuration;
 
 @end

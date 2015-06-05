@@ -6,8 +6,11 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "EaseMob.h"
 
-#import "EMSDKFullHeaders.h"
+#warning 请使用EaseMob单实例引用callManager. 在下个版本将不会提供EMSDKFull及其头文件. EMSDKFull的功能将整合进EaseMob中.
+
+@protocol ICallManager;
 
 /*!
  @class
@@ -16,9 +19,6 @@
  [EMSDKFull sharedInstance]
  */
 @interface EMSDKFull : NSObject
-{
-    id<ICallManager> _callManager;
-}
 
 /*!
  @method

@@ -8,21 +8,4 @@
 #ifndef EaseMobClientSDK_EMSDKFullHeaders_h
 #define EaseMobClientSDK_EMSDKFullHeaders_h
 
-#import "EaseMob.h"
-
-// defs headers
-#import "EMCallServiceDefs.h"
-
-//manager
-#import "ICallManager.h"
-
-//delegate
-#import "EMCallManagerDelegate.h"
-
-
-//type
-#import "EMCallSession.h"
-#import "OpenGLView20.h"
-
-
 #endif
