@@ -96,6 +96,48 @@
                      width:(int)width
                     height:(int)height;
 
+/*!
+ @method
+ @brief  获取实时视频的延迟ms，实时变化
+ */
+- (int)getVideoTimedelay;
+
+/*!
+ @method
+ @brief  获取实时视频的帧率，实时变化
+ */
+- (int)getVideoFramerate;
+
+/*!
+ @method
+ @brief  获取实时视频时，每100包丢失的包数，实时变化
+ */
+- (int)getVideoLostcnt;
+
+/*!
+ @method
+ @brief  获取实时视频的宽度，固定值，不会实时变化
+ */
+- (int)getVideoWidth;
+
+/*!
+ @method
+ @brief  获取实时视频的高度，固定值，不会实时变化
+ */
+- (int)getVideoHeight;
+
+/*!
+ @method
+ @brief  获取对方实时视频的比特率kbps，实时变化
+ */
+- (int)getVideoRemoteBitrate;
+
+/*!
+ @method
+ @brief  获取本地实时视频的比特率kbps，实时变化
+ */
+- (int)getVideoLocalBitrate;
+
 @optional
 
 #pragma mark - EM_DEPRECATED_IOS

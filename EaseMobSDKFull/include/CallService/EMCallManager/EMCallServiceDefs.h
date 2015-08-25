@@ -51,14 +51,29 @@ typedef NS_ENUM(NSInteger, EMCallSessionType){
  @constant eCallReason_Hangup 对方挂断
  @constant eCallReason_Reject 对方拒接
  @constant eCallReason_Busy 对方占线
+ @constant eCallReason_Failure 失败
  */
 typedef NS_ENUM(NSInteger, EMCallStatusChangedReason){
-    eCallReason_Null = 0,
-    eCallReason_Offline,
-    eCallReason_NoResponse,
-    eCallReason_Hangup,
-    eCallReason_Reject,
-    eCallReason_Busy,
+    eCallReasonNull = 0,
+    eCallReasonOffline,
+    eCallReasonNoResponse,
+    eCallReasonHangup,
+    eCallReasonReject,
+    eCallReasonBusy,
+    eCallReasonFailure,
+    eCallReason_Null = eCallReasonNull,
+    eCallReason_Offline = eCallReasonOffline,
+    eCallReason_NoResponse = eCallReasonNoResponse,
+    eCallReason_Hangup = eCallReasonHangup,
+    eCallReason_Reject = eCallReasonReject,
+    eCallReason_Busy = eCallReasonBusy,
+    eCallReason_Failure = eCallReasonFailure,
+};
+
+typedef NS_ENUM(NSInteger, EMCallConnectType) {
+    eCallConnectTypeNone = 0,
+    eCallConnectTypeDirect,
+    eCallConnectTypeRelay,
 };
 
 #endif

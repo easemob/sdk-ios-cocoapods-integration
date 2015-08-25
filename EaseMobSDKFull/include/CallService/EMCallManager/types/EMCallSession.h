@@ -34,7 +34,13 @@
  @class
  @brief 通话的状态
  */
-@property (nonatomic) EMCallSessionStatus status;
+@property (nonatomic, readonly) EMCallSessionStatus status;
+
+/*!
+ @class
+ @brief 连接类型
+ */
+@property (nonatomic, readonly) EMCallConnectType connectType;
 
 /*!
  @class
@@ -42,15 +48,7 @@
  */
 @property (strong, nonatomic) OpenGLView20 *displayView;
 
-/*!
-@method
-@brief 创建通话实例（不支持外部调用）
-@discussion
-@param sessionId 通话实例的id
-@param type      通话的类型
-@result 通话实例
-*/
-- (instancetype)initWithSessionId:(NSString *)sessionId
-                             type:(EMCallSessionType)type;
+
+- (instancetype)initWithSessionId:(NSString *)sessionId;
 
 @end
