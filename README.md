@@ -2,7 +2,7 @@
 
 环信iOS FullSDK  CocoaPod repo
 
-从2.1.4.1开始, 小伙伴们可以使用 Cocoapods 来集成环信实时语音啦, 集成方法如下:
+从2.1.4.1开始, 小伙伴们可以使用 CocoaPods 来集成环信实时语音啦, 集成方法如下:
 
 1. Podfile 文件添加如下代码
 
