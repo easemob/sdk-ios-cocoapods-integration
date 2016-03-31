@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'EaseMobSDKFull'
-  spec.version      = '2.2.3'
+  spec.version      = '2.2.4'
   spec.license      = 'MIT'
   spec.summary      = 'An Objective-C client for IM and Real-time voice service'
   spec.homepage     = 'http://www.easemob.com'
