@@ -10,7 +10,7 @@
 		
 2. 使用时, 需要引入头文件, 在 pch 预编译文件中, 引入头文件如下:
 
-		#import <EaseMobSDKFull/EMSDKFull.h>
+		#import <EaseMobSDKFull/EaseMob.h>
 		
 接下来, 就可以正常使用环信的所有功能啦.
 
